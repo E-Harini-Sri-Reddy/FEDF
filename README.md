@@ -268,7 +268,7 @@ While exploring React, I also learned about **SWC** and **Vite**, which are tool
 
 ---
 
-# **Date: 21st August 2025**
+**Date: 21st August 2025**
 
 ## JavaScript Basics: Conditional Logic, Role Handling, Loops, and DOM Manipulation
 
