@@ -194,29 +194,29 @@ These tags help make web pages more interactive and fun!
 
 ### What React Is:
 
-* **React** is a popular JavaScript library used for building **user interfaces**, particularly for **single-page applications (SPAs)**.
-* Developed by **Facebook**, React allows developers to build dynamic, fast, and interactive UIs.
+- **React** is a popular JavaScript library used for building **user interfaces**, particularly for **single-page applications (SPAs)**.
+- Developed by **Facebook**, React allows developers to build dynamic, fast, and interactive UIs.
 
 ### Key Concepts I Learned:
 
 1. **Components in React:**
 
-   * In React, everything is based on **components**. A **component** is a JavaScript function or class that returns part of the user interface (UI).
-   * Components can be **reusable** and **nested** inside one another. This makes building complex UIs easier by breaking them into smaller, manageable parts.
+   - In React, everything is based on **components**. A **component** is a JavaScript function or class that returns part of the user interface (UI).
+   - Components can be **reusable** and **nested** inside one another. This makes building complex UIs easier by breaking them into smaller, manageable parts.
 
    Example of a **Functional Component**:
 
    ```jsx
    function Welcome() {
-       return <h1>Hello, welcome to React!</h1>;
+     return <h1>Hello, welcome to React!</h1>;
    }
    ```
 
 2. **JSX (JavaScript XML):**
 
-   * **JSX** is a syntax extension for JavaScript, allowing you to write HTML-like code inside JavaScript.
-   * It is **not HTML**, but it looks similar, and JSX gets compiled into JavaScript `React.createElement()` calls.
-   * JSX allows for a more readable and familiar way to define UI elements compared to using JavaScript functions directly.
+   - **JSX** is a syntax extension for JavaScript, allowing you to write HTML-like code inside JavaScript.
+   - It is **not HTML**, but it looks similar, and JSX gets compiled into JavaScript `React.createElement()` calls.
+   - JSX allows for a more readable and familiar way to define UI elements compared to using JavaScript functions directly.
 
    Example of JSX:
 
@@ -226,11 +226,11 @@ These tags help make web pages more interactive and fun!
 
 3. **Benefits of React:**
 
-   * **Declarative**: React makes it easy to create interactive UIs by describing how the UI should look for any given state. React takes care of updating the UI when the state changes.
-   * **Component-Based Architecture**: React encourages building UIs with reusable components, making development more modular and maintainable.
-   * **Performance**: React uses a **Virtual DOM** to efficiently update the real DOM, improving app performance by only updating the parts of the UI that changed.
-   * **Rich Ecosystem**: React has a large and active community, along with many libraries and tools (e.g., **React Router** for navigation, **Redux** for state management) that extend its functionality.
-   * **Cross-Platform**: React can be used to build applications for different platforms like web, mobile (with React Native), and even desktop applications.
+   - **Declarative**: React makes it easy to create interactive UIs by describing how the UI should look for any given state. React takes care of updating the UI when the state changes.
+   - **Component-Based Architecture**: React encourages building UIs with reusable components, making development more modular and maintainable.
+   - **Performance**: React uses a **Virtual DOM** to efficiently update the real DOM, improving app performance by only updating the parts of the UI that changed.
+   - **Rich Ecosystem**: React has a large and active community, along with many libraries and tools (e.g., **React Router** for navigation, **Redux** for state management) that extend its functionality.
+   - **Cross-Platform**: React can be used to build applications for different platforms like web, mobile (with React Native), and even desktop applications.
 
 ### SWC and Vite - Modern JavaScript Development Tools
 
@@ -238,32 +238,76 @@ While exploring React, I also learned about **SWC** and **Vite**, which are tool
 
 1. **SWC (Speedy Web Compiler):**
 
-   * SWC is a **fast JavaScript/TypeScript compiler** written in Rust.
-   * It aims to be a faster alternative to Babel for transpiling modern JavaScript (ES6+) into code that can run on older browsers.
-   * SWC supports **JavaScript** and **TypeScript** out of the box, and it's designed to be highly performant.
+   - SWC is a **fast JavaScript/TypeScript compiler** written in Rust.
+   - It aims to be a faster alternative to Babel for transpiling modern JavaScript (ES6+) into code that can run on older browsers.
+   - SWC supports **JavaScript** and **TypeScript** out of the box, and it's designed to be highly performant.
 
    Key benefits of SWC:
 
-   * **Faster than Babel**: SWC compiles JavaScript and TypeScript code much faster than Babel, which is essential for large codebases.
-   * **Zero-config**: SWC is designed to work out of the box with minimal setup.
+   - **Faster than Babel**: SWC compiles JavaScript and TypeScript code much faster than Babel, which is essential for large codebases.
+   - **Zero-config**: SWC is designed to work out of the box with minimal setup.
 
 2. **Vite:**
 
-   * **Vite** is a modern **JavaScript build tool** and **development server** that is focused on **speed** and **simplicity**.
-   * Vite leverages the power of **ES modules** in the browser for faster builds and updates.
-   * It provides **instant server start**, **hot module replacement** (HMR), and **pre-configured support** for frameworks like React.
+   - **Vite** is a modern **JavaScript build tool** and **development server** that is focused on **speed** and **simplicity**.
+   - Vite leverages the power of **ES modules** in the browser for faster builds and updates.
+   - It provides **instant server start**, **hot module replacement** (HMR), and **pre-configured support** for frameworks like React.
 
    Key features of Vite:
 
-   * **Fast development environment**: Vite uses ES modules natively in the browser, so the server starts instantly without bundling the entire app at the beginning.
-   * **Hot Module Replacement (HMR)**: Vite’s HMR is fast and reliable, allowing developers to see changes in real-time without refreshing the page.
-   * **Optimized production builds**: Vite automatically optimizes and bundles your app for production when you’re ready to deploy.
+   - **Fast development environment**: Vite uses ES modules natively in the browser, so the server starts instantly without bundling the entire app at the beginning.
+   - **Hot Module Replacement (HMR)**: Vite’s HMR is fast and reliable, allowing developers to see changes in real-time without refreshing the page.
+   - **Optimized production builds**: Vite automatically optimizes and bundles your app for production when you’re ready to deploy.
 
 ### What I Learned:
 
-* **React** helps in building **dynamic UIs** using components and JSX, improving the efficiency of building and managing web apps.
-* **JSX** allows writing HTML-like code inside JavaScript, making React components easier to work with and more intuitive.
-* **React’s component-based structure** and the **Virtual DOM** improve app performance and maintainability.
-* **SWC** and **Vite** are modern tools that improve the development process by providing faster compilation (SWC) and optimized build workflows (Vite).
+- **React** helps in building **dynamic UIs** using components and JSX, improving the efficiency of building and managing web apps.
+- **JSX** allows writing HTML-like code inside JavaScript, making React components easier to work with and more intuitive.
+- **React’s component-based structure** and the **Virtual DOM** improve app performance and maintainability.
+- **SWC** and **Vite** are modern tools that improve the development process by providing faster compilation (SWC) and optimized build workflows (Vite).
+
+---
+
+# **Date: 21st August 2025**
+
+## JavaScript Basics: Conditional Logic, Role Handling, Loops, and DOM Manipulation
+
+### Key Concepts Learned:
+
+1. **Conditional Logic (If-Else Statements)**
+
+   - I learned how to use **if-else** statements to handle conditional logic in JavaScript.
+   - For example, when checking if a customer has more than 100 points, I used an `if` statement to determine if they were a **Gold** or **Silver** customer based on the number of points entered.
+
+2. **Role Handling with Switch-Case**
+
+   - I practiced handling **user roles** like **Admin**, **Guest**, and **Developer** using a **switch-case** structure.
+   - Based on the user input, the app would display a welcome message according to the role provided by the user.
+
+3. **JavaScript Loops**
+
+   - I implemented three types of loops to print "Hello World" 5 times:
+     - **For Loop**: Iterating from 1 to 5.
+     - **While Loop**: Using a condition to print the message while the counter is greater than zero.
+     - **Do-While Loop**: Ensuring the message is printed at least once, even if the condition is false.
+
+4. **DOM Manipulation**
+
+   - I learned how to interact with the **DOM** (Document Object Model) to manipulate elements dynamically.
+   - By using methods like `document.getElementById()`, I retrieved input values and displayed results directly on the page, updating the content in response to user interaction (e.g., clicking a button).
+
+5. **Event Listeners**
+   - I worked with **event listeners** like `click` to trigger functions when users interact with the page. For example, clicking the "Submit" button would display the corresponding message based on the input provided.
+
+---
+
+### What I Learned:
+
+- **Conditional Statements**: Understood on how to control the flow of logic in JavaScript with `if`, `else`, and `switch-case` statements.
+- **Loops**: I learned how to use different types of loops to repeat actions and control iterations.
+- **DOM Manipulation**: I got hands-on experience interacting with HTML elements and dynamically updating content based on user input.
+- **Event Handling**: By using event listeners, I can make webpages interactive and responsive to user actions.
+
+This practice helped me strengthen my concepts in JavaScript like working with **working with the DOM**, **handling user input**, and implementing **logic and loops** effectively.
 
 ---
