@@ -1,0 +1,25 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box
+}
+
+.input, .helloSubmit {
+    margin-left: 47px;
+    height: 30px;
+    font-size: 20px;
+    width: 250px;
+}
+
+.outputDiv {
+    margin-bottom: 30px;
+}
+
+.submit {
+    height: 30px;
+    font-size: 20px;
+}
+
+.outputDiv h2 {
+  font-weight: normal;
+  margin-left: 46px;
+}
