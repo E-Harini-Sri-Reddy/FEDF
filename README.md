@@ -1,3 +1,5 @@
+<hr />
+
 **Date: 31st July 2025**
 
 ## Semantic Tags
@@ -309,5 +311,239 @@ While exploring React, I also learned about **SWC** and **Vite**, which are tool
 - **Event Handling**: By using event listeners, I can make webpages interactive and responsive to user actions.
 
 This practice helped me strengthen my concepts in JavaScript like working with **working with the DOM**, **handling user input**, and implementing **logic and loops** effectively.
+
+---
+
+**Date: 22nd August 2025**
+
+---
+
+## **JavaScript Functions: A Structured Learning Flow**
+
+---
+
+### **1. What is a Function?**
+
+A function is a block of reusable code designed to perform a task.
+
+```js
+function sayHello() {
+  console.log("Hello!");
+}
+sayHello(); // Output: Hello!
+```
+
+---
+
+## What is `this` in JavaScript?
+
+- In JavaScript, `this` refers to the **object** that is **executing the current function**.
+- The value of `this` depends on **how** the function is called (not where it's defined).
+
+---
+
+## Example: Regular Function (`this` behaves normally)
+
+```js
+const person = {
+  name: "John",
+  greet: function () {
+    console.log(this.name);
+  },
+};
+
+person.greet(); // Output: "John"
+```
+
+Here, inside `greet()`, `this` refers to the `person` object — because `greet` is called **as a method of `person`**.
+
+---
+
+## NOTE: Arrow Functions Do **NOT** Have Their Own `this`
+
+Arrow functions don’t bind their own `this`. Instead, they inherit `this` from the **parent (lexical) scope**.
+
+```js
+const person = {
+  name: "John",
+  greet: () => {
+    console.log(this.name);
+  },
+};
+
+person.greet(); // Output: undefined
+```
+
+Why? Because `this` in an arrow function refers to the `this` from **outside** the `person` object (often the global scope), not the `person` object.
+
+---
+
+## Summary Table: `this` Binding
+
+| Function Type        | Has its own `this`? | `this` refers to...                      |
+| -------------------- | ------------------- | ---------------------------------------- |
+| Function Declaration | ✅                  | Depends on how the function is called    |
+| Function Expression  | ✅                  | Depends on how the function is called    |
+| Named Function Expr. | ✅                  | Depends on how the function is called    |
+| Arrow Function       | ❌                  | Inherits `this` from surrounding scope   |
+| IIFE                 | ✅                  | Depends on context (global or enclosing) |
+| Generator Function   | ✅                  | Works like regular functions             |
+
+---
+
+### Use Arrow Functions When:
+
+- You want to **inherit `this`** from the surrounding code (e.g., inside a method or callback).
+- You're writing **short, one-line** functions or **callbacks**.
+
+### Use Regular Functions When:
+
+- You need your function to have its own `this`, especially when defining **methods on objects**.
+
+---
+
+### **2. Function Declaration (Named Function)**
+
+- Standard way to define a function.
+- Hoisted: Can be used before it's declared.
+
+```js
+function greet() {
+  console.log("Hello from function declaration!");
+}
+greet(); // ✅ Works even if called before declaration
+```
+
+> **Key Point**: These are hoisted to the top of their scope.
+
+---
+
+### **3. Function Expression**
+
+- Function assigned to a variable.
+- Not hoisted: Cannot be used before it’s declared.
+
+```js
+const sayHi = function () {
+  console.log("Hi from function expression!");
+};
+sayHi();
+```
+
+---
+
+### **4. Anonymous Function**
+
+- A function **without a name**, usually used in expressions or callbacks.
+
+```js
+let walk = function () {
+  console.log("Walk");
+};
+walk();
+```
+
+> **Key Point**: Used when the function doesn't need a name (e.g., event handlers, setTimeout, etc.)
+
+---
+
+### **5. Named Function Expression**
+
+- Function expression that has its own internal name.
+- Helpful for recursion or debugging.
+
+```js
+let slowrun = function run() {
+  console.log("Running slowly");
+};
+slowrun();
+```
+
+> **Key Point**: Name is accessible only inside the function.
+
+---
+
+### **6. Arrow Functions (`=>`)**
+
+- Shorter syntax introduced in ES6.
+- Doesn’t have its own `this` or `arguments`.
+
+```js
+const add = (a, b) => a + b;
+console.log(add(2, 3)); // Output: 5
+```
+
+> **Key Point**: Great for callbacks and simple logic.
+
+---
+
+### **7. IIFE (Immediately Invoked Function Expression)**
+
+- Executes immediately after being defined.
+- Used to create private scopes (avoid polluting global scope).
+
+```js
+(function () {
+  console.log("KL Deemed University");
+})();
+```
+
+> **Key Point**: Self-invoking and often used in modules or to isolate variables.
+
+---
+
+### **8. Generator Functions**
+
+- Introduced in ES6 with `function*`.
+- Can pause and resume execution using `yield`.
+
+```js
+function* count() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const counter = count();
+console.log(counter.next().value); // Output: 1
+console.log(counter.next().value); // Output: 2
+```
+
+> **Key Point**: Useful for working with sequences, async flows, or iterators.
+
+---
+
+### **9. Hoisting**
+
+**Function declarations are hoisted**, meaning they can be used before they are declared.
+**Function expressions and arrow functions are not hoisted**.
+
+```js
+// Function declaration (hoisted)
+greet(); // ✅ Works
+function greet() {
+  console.log("Hello");
+}
+
+// Function expression (not hoisted)
+// walk(); ❌ Error: Cannot access 'walk' before initialization
+let walk = function () {
+  console.log("Walk");
+};
+```
+
+---
+
+## **Summary Table**
+
+| Function Type             | Syntax                   | Hoisted? | Has `this`? | Use Case                     |
+| ------------------------- | ------------------------ | -------- | ----------- | ---------------------------- |
+| Function Declaration      | `function name() {}`     | ✅       | ✅          | Reusable code blocks         |
+| Function Expression       | `let x = function(){}`   | ❌       | ✅          | Assigning to variables       |
+| Anonymous Function        | `function() {}`          | ❌       | ✅          | Callbacks, expressions       |
+| Named Function Expression | `let x = function y(){}` | ❌       | ✅          | Recursion inside expressions |
+| Arrow Function            | `() => {}`               | ❌       | ❌          | Short functions, callbacks   |
+| IIFE                      | `(function(){})()`       | ❌       | ✅          | Private scopes               |
+| Generator Function        | `function* name(){}`     | ❌       | ✅          | Iterators, async flows       |
 
 ---
