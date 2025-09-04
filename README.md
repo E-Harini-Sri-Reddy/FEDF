@@ -547,3 +547,122 @@ let walk = function () {
 | Generator Function        | `function* name(){}`     | ❌       | ✅          | Iterators, async flows       |
 
 ---
+
+**Date: 26th August 2025**
+
+---
+
+## **JavaScript Array Manipulation - Key Array Methods**
+
+### 1. **Adding Elements to Arrays**
+
+- **`push()`**: Adds elements to the **end** of the array.
+
+  ```js
+  numbers.push(5, 6); // Adds 5 and 6 at the end
+  ```
+
+- **`unshift()`**: Adds elements to the **beginning** of the array.
+
+  ```js
+  numbers.unshift(-1, 0); // Adds -1 and 0 at the start
+  numbers.unshift("a", "b"); // Adds 'a' and 'b' at the beginning
+  ```
+
+- **`splice()`**: Adds or removes elements at any position in the array.
+  - To **add** elements without deleting:
+    ```js
+    numbers.splice(2, 0, "c", "d"); // Adds 'c' and 'd' starting from index 2
+    ```
+  - To **remove** elements:
+    ```js
+    numbers.splice(0, 4); // Removes 4 elements starting from index 0
+    ```
+  - To **delete and add** elements:
+    ```js
+    numbers.splice(9, 2, 7, 8); // Removes 2 elements at index 9 and adds 7, 8
+    ```
+
+### 2. **Searching for Elements**
+
+- **`indexOf()`**: Returns the first index of a specified element.
+
+  ```js
+  console.log(numbers.indexOf(4)); // Returns index of 4
+  ```
+
+- **`lastIndexOf()`**: Returns the last index of a specified element.
+
+  ```js
+  console.log(numbers.lastIndexOf(2)); // Finds the last index of 2
+  ```
+
+- **`includes()`**: Checks if an element exists in the array.
+  ```js
+  console.log(numbers.includes(12)); // Checks if 12 is in the array
+  console.log(numbers.includes(5)); // Checks if 5 is in the array
+  ```
+
+### 3. **Removing Elements**
+
+- **`pop()`**: Removes the last element of the array.
+
+  ```js
+  let popped = numbers.pop(); // Removes last element
+  ```
+
+- **`shift()`**: Removes the first element of the array.
+  ```js
+  let shifted = numbers.shift(); // Removes the first element
+  ```
+
+### 4. **Combining and Slicing Arrays**
+
+- **`concat()`**: Merges two or more arrays into one.
+
+  ```js
+  let arr3 = arr1.concat(arr2); // Combines arr1 and arr2
+  ```
+
+- **`slice()`**: Extracts a section of the array.
+  ```js
+  let slice = arr3.slice(2, 4); // Gets a subset of arr3 from index 2 to 4
+  ```
+
+### 5. **Sorting and Reversing Arrays**
+
+- **`sort()`**: Sorts an array.
+
+  ```js
+  console.log(arr4.sort()); // Sorts arr4 in ascending order
+  ```
+
+- **`reverse()`**: Reverses the order of elements in an array.
+  ```js
+  console.log(arr4.reverse()); // Reverses arr4
+  ```
+
+### 6. **Filtering Arrays**
+
+- **`filter()`**: Filters out values that don't meet the specified condition.
+  ```js
+  console.log(arr.filter((n) => n > 0)); // Filters out non-positive numbers
+  ```
+
+### 7. **Finding Common Elements Between Arrays**
+
+- Using **`filter()`** and **`includes()`**:
+  ```js
+  console.log(array1.filter((n) => array2.includes(n))); // Finds common elements between array1 and array2
+  ```
+
+## Summary
+
+- JavaScript arrays are versatile and can be easily manipulated using built-in methods.
+- **Adding** and **removing** elements can be done with methods like `push()`, `unshift()`, `pop()`, and `shift()`.
+- **Searching** for elements in an array can be done using `indexOf()`, `lastIndexOf()`, and `includes()`.
+- **Combining** arrays and extracting portions of them is possible with `concat()` and `slice()`.
+- Arrays can be **sorted** and **reversed** using the `sort()` and `reverse()` methods.
+- The **filter()** method allows for easy removal of unwanted elements.
+
+---
